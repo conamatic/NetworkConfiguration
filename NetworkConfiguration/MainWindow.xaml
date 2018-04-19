@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NetworkConfiguration"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Network Configuration" Height="643.55" Width="499" WindowStyle="ToolWindow" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,2" HorizontalAlignment="Left" Width="484">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="ip_1" HorizontalAlignment="Left" Height="40" Margin="130,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="22" TabIndex="1" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <TextBox x:Name="ip_2" HorizontalAlignment="Left" Height="40" Margin="194,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="22" TabIndex="2" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <TextBox x:Name="ip_3" HorizontalAlignment="Left" Height="40" Margin="260,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="22" TabIndex="3" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <TextBox x:Name="ip_4" HorizontalAlignment="Left" Height="40" Margin="324,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="22" TabIndex="4" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <Button x:Name="ApplyButton" Content="&gt;" HorizontalAlignment="Left" Margin="403,10,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click" TabIndex="999" Height="40" Background="#FFF1F1F1" FontSize="22" VerticalContentAlignment="Top"/>
+        <TextBox x:Name="subnet_1" HorizontalAlignment="Left" Height="30" Margin="130,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="16" TabIndex="5" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <TextBox x:Name="subnet_2" HorizontalAlignment="Left" Height="30" Margin="194,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="16" TabIndex="6" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <TextBox x:Name="subnet_3" HorizontalAlignment="Left" Height="30" Margin="260,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="16" TabIndex="7" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <TextBox x:Name="subnet_4" HorizontalAlignment="Left" Height="30" Margin="324,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="16" TabIndex="8" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <Label x:Name="ipAddress_Label" Content="IP Address" HorizontalAlignment="Left" Margin="10,16,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.737,0.115" Width="100" Height="26"/>
+        <Label x:Name="subnet_label" Content="Subnet Mask" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Height="30" Width="100"/>
+        <TextBox x:Name="gateway_1" HorizontalAlignment="Left" Height="30" Margin="130,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="16" TabIndex="9" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <TextBox x:Name="gateway_2" HorizontalAlignment="Left" Height="30" Margin="194,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="16" TabIndex="10" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <TextBox x:Name="gateway_3" HorizontalAlignment="Left" Height="30" Margin="260,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="16" TabIndex="11" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <TextBox x:Name="gateway_4" HorizontalAlignment="Left" Height="30" Margin="324,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="16" TabIndex="12" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <Label x:Name="gateway_label" Content="Default Gateway" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Height="30" Width="100"/>
+        <Label x:Name="interface_label" Content="" HorizontalAlignment="Left" Margin="130,292,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.077" Width="253" Height="26"/>
+        <TextBox x:Name="dns_1" HorizontalAlignment="Left" Height="30" Margin="130,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="16" TabIndex="13" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <TextBox x:Name="dns_2" HorizontalAlignment="Left" Height="30" Margin="194,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="16" TabIndex="14" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <TextBox x:Name="dns_3" HorizontalAlignment="Left" Height="30" Margin="260,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="16" TabIndex="15" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <TextBox x:Name="dns_4" HorizontalAlignment="Left" Height="30" Margin="324,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextAlignment="Center" IsUndoEnabled="True" FontSize="16" TabIndex="16" TextChanged="FieldChanged" MaxLength="3" VerticalContentAlignment="Center" KeyDown="miscInput_KeyDown"/>
+        <Label x:Name="dns_label" Content="DNS" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" Height="30" Width="100"/>
+        <TextBox x:Name="dnssuffix" HorizontalAlignment="Left" Height="36" Margin="130,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" HorizontalContentAlignment="Center" FontSize="18" VerticalContentAlignment="Center" TabIndex="17"/>
+        <Label x:Name="dns_suffix_label" Content="DNS Suffix" HorizontalAlignment="Left" Margin="10,163,0,0" VerticalAlignment="Top" Width="98" Height="36" VerticalContentAlignment="Center"/>
+        <ListBox x:Name="interfaceList" HorizontalAlignment="Left" Height="85" Margin="10,323,0,0" VerticalAlignment="Top" Width="373"/>
+        <ListBox x:Name="ConfigurationList" HorizontalAlignment="Left" Height="191" Margin="10,413,0,0" VerticalAlignment="Top" Width="373" FontSize="16"/>
+        <Button x:Name="SaveButton" Content="Save" HorizontalAlignment="Left" Margin="399,204,0,0" VerticalAlignment="Top" Width="75" Height="36" Background="#FFF1F1F1" Click="SaveButton_Click"/>
+        <Button x:Name="DHCPButton" Content="DHCP" HorizontalAlignment="Left" Margin="403,53,0,0" VerticalAlignment="Top" Width="75" Background="#FFF1F1F1" Click="DHCPButton_Click" Height="20"/>
+        <TextBox x:Name="NameInput" HorizontalAlignment="Left" Height="36" Margin="130,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" TabIndex="18"/>
+        <Label x:Name="name_label" Content="Name" HorizontalAlignment="Left" Margin="10,204,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.538" Width="100" Height="36" VerticalContentAlignment="Center"/>
     </Grid>
 </Window>
